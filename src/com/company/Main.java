@@ -7,5 +7,20 @@ public class Main {
         String answer = "The answer is " + result;
         //this comment goes as well
         System.out.println(answer);
+
+        String howMany = 20 + " Things";
+        System.out.println(howMany);
+
+        int intValue = 42;
+        var fromInt = Integer.toString(intValue);
+        System.out.println(fromInt);
+
+        boolean boolValue = true;
+        var fromBool = Boolean.toString(boolValue);
+        System.out.println(fromBool);
+
+        long longValue = 10_000_000;
+        var fromLong = Long.toString(longValue);
+        System.out.println(fromLong);
     }
 }
