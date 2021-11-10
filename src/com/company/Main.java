@@ -14,7 +14,7 @@ public class Main {
         int position = s1.indexOf("California");
         System.out.println("The position of California is: " + position);
 
-        var sub = s1.substring(11); //This one starts from the index specified to the res of the string...
+        var sub = s1.substring(11); //This one starts from the index specified to the res of the string..
         System.out.println(sub);
 
 
