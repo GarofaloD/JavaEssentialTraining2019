@@ -21,6 +21,7 @@ public class Main {
         } catch (Exception e){ //Exception will catch all exceptions, no matter the origin
             e.printStackTrace();
             System.out.println("Any exception: " + e.getMessage());//getting the message from the exception manager
+            //This is another commit so i can check it out
         }
 
         System.out.println("I'm not dead yet!");
