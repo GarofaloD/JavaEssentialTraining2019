@@ -6,22 +6,40 @@ import com.company.model.Hat;
 import com.company.model.Shirt;
 
 import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        var shirt = new Shirt(
-                ClothingSize.L,
-                19.99,
-                3);
-        displayItemDetails(shirt);
+        //Collections
+        //This is a list and to specify the type, we need generics notations <>
+        //Lists can be resized and a lot more complex operations
+        List<String> colors = new ArrayList<>();
+        colors.add("Red");
+        colors.add("Green");
+        colors.add("Blue");
 
-        var hat = new Hat(
+        for (int i = 0; i < colors.size(); i++) {
+            System.out.println(colors.get(i));
+        }
+
+
+        List<ClothingItem> items = new ArrayList<>();
+        items.add(new Shirt(
+                        ClothingSize.L,
+                        19.99,
+                        3));
+        items.add(new Hat(
                 ClothingSize.M,
                 29.99,
-                1);
-        displayItemDetails(hat);
+                1));
+
+        for (ClothingItem item: items) {
+            displayItemDetails(item);
+        }
+
     }
 
     private static void displayItemDetails(ClothingItem item) {
