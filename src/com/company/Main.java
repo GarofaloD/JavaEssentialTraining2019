@@ -11,17 +11,34 @@ public class Main {
 
     public static void main(String[] args) {
 
-        var shirt = new Shirt(
-                ClothingSize.L,
-                19.99,
-                3);
-        displayItemDetails(shirt);
+        //Simple Array. Fixed length. Useful when we know exactly what is it that we are storing
+        String[] colors = new String[3];  //# items in the array
+        colors[0] = "Red";
+        colors[1] = "Green";
+        colors[2] = "Blue";
 
-        var hat = new Hat(
-                ClothingSize.M,
-                29.99,
-                1);
-        displayItemDetails(hat);
+        for (int i = 0; i < colors.length; i++) {
+            System.out.println(colors[i]);
+        }
+
+        ClothingItem[] items = {
+                new Shirt(
+                        ClothingSize.L,
+                        19.99,
+                        3),
+                new Hat(
+                        ClothingSize.M,
+                        29.99,
+                        1)
+        };
+
+        //We can then pass all the items in the array to the method
+        for (ClothingItem clothingItem: items) {
+            displayItemDetails(clothingItem);
+        }
+
+
+
     }
 
     private static void displayItemDetails(ClothingItem item) {
