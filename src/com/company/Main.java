@@ -1,5 +1,8 @@
 package com.company;
 
+//In the main, if it comes from a different package, it needs to import the class with the methods you are using
+import com.company.utilities.CalcHelper;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

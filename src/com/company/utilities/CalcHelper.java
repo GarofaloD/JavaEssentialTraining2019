@@ -1,4 +1,6 @@
-package com.company;
+
+//The declaration of the location is necessary when in a package
+package com.company.utilities;
 
 public class CalcHelper {
 
