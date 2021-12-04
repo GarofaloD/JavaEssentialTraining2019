@@ -3,6 +3,10 @@ package com.company;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+
+//His solution to the calculator
+//Abstraction of the functionality in a different class
+
 public class Main {
 
     public static void main(String[] args) {
@@ -26,23 +30,19 @@ public class Main {
         System.out.print("Select an operation (+ - * /): ");
         var operation = sc.nextLine();
 
+
+        //Calling the methods from the class
+        //This one has an enhanced switch
         double result;
         switch (operation) {
-            case "+":
-                result = d1 + d2;
-                break;
-            case "-":
-                result = d1 - d2;
-                break;
-            case "*":
-                result = d1 * d2;
-                break;
-            case "/":
-                result = d1 / d2;
-                break;
-            default:
+            case "+" -> result = CalcHelper.addValues(d1, d2);
+            case "-" -> result = CalcHelper.substractValues(d1, d2);
+            case "*" -> result = CalcHelper.multiplyValues(d1, d2);
+            case "/" -> result = CalcHelper.divideValues(d1, d2);
+            default -> {
                 System.out.println("You didn't choose a valid operation");
                 return;
+            }
         }
         System.out.println("The answer is " + result);
     }
