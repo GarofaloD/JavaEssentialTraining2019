@@ -2,22 +2,29 @@ package com.company.model;
 
 public class ClothingItem {
 
+    //Constants for the type
     public static final String SHIRT = "Shirt";
     public static final String PANTS = "Pants";
     public static final String SHOES = "Shoes";
 
+    //PROPERTIES
     private String type;
-    private String size;
+
+    //In this case, instead of a string it will be based on the enumerator that holds the sizes
+    private ClothingSize size;
     private double price;
     private int quantity;
 
-    public ClothingItem(String type, String size, double price, int quantity) {
+    //CONSTRUCTOR
+    public ClothingItem(String type, ClothingSize size, double price, int quantity) {
         this.type = type;
         this.size = size;
         this.price = price;
         this.quantity = quantity;
     }
 
+
+    //GETTERS & SETTERS
     public String getType() {
         return type;
     }
@@ -26,11 +33,12 @@ public class ClothingItem {
         this.type = type;
     }
 
-    public String getSize() {
+    //The type we are getting is not a string, unlike before: it is an enumerator
+    public ClothingSize getSize() {
         return size;
     }
-
-    public void setSize(String size) {
+    //Same thing here: the setter is expecting an enumerator in the constructor. That is what we need to pass
+    public void setSize(ClothingSize size) {
         this.size = size;
     }
 
